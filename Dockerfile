@@ -5,6 +5,7 @@ RUN apk update && \
   apk add \
     bash \
     curl \
+    jq \
     vim
 
 # Create directories for the project
