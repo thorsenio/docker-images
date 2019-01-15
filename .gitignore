@@ -1,4 +1,14 @@
+# IDE & editor files
+.idea
+.vscode
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+
+# Local-only files
+/_local-only/
+
 # OS files
 .DS_Store
 Thumbs.db
-
