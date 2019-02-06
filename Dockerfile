@@ -15,6 +15,7 @@ RUN apk update && \
     groff \
     jq \
     less \
+    openssh \
     vim
 
 # Create directories for the project
