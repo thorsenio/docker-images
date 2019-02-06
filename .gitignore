@@ -6,6 +6,9 @@
 *.sln
 *.suo
 
+# Development files
+.githooks
+
 # Local-only files
 /_local-only/
 
