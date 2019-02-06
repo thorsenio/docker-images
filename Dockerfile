@@ -20,6 +20,9 @@ RUN apk update && \
 # Create directories for the project
 RUN mkdir -p /var/project
 
+# Upgrade pip
+RUN pip install --upgrade pip
+
 # Install the AWS CLI and add it to the PATH
 RUN pip install --upgrade awscli --no-warn-script-location
 
