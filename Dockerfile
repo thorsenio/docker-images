@@ -16,6 +16,7 @@ RUN apk update && \
     jq \
     less \
     openssh \
+    rsync \
     vim
 
 # Create directories for the project
