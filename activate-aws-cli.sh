@@ -6,7 +6,7 @@ docker container run \
   --interactive \
   --rm \
   --tty \
-  --mount type=bind,source=$(PWD),target=/var/project \
+  --mount type=bind,source=${PWD},target=/var/project \
   --mount type=bind,source="${HOME}/.aws",target=/root/.aws \
   --mount type=bind,source="${HOME}/.ecs",target=/root/.ecs \
   --mount type=bind,source="${HOME}/.ssh",target=/root/.ssh \
