@@ -3,7 +3,9 @@
 # - AWS CLI: aws
 # - ECS CLI: ecs-cli
 #
-# as well as some useful utilities such as `jq` and `vim`.
+# Required: curl, openssh, python
+#
+# It also contains useful utilities for working with the CLIs: bash, groff, jq, less, rsync, vim
 
 FROM python:alpine
 
@@ -25,11 +27,12 @@ RUN mkdir -p /var/project
 # Upgrade pip
 RUN pip install --upgrade pip
 
-# Install the AWS CLI and add it to the PATH
+# Install the AWS CLI; suppress the warning that comes when installing as root
 RUN pip install --upgrade awscli --no-warn-script-location
 
+# Install the ECS CLI
 RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest && \
   chmod +x /usr/local/bin/ecs-cli
 
+# Set the working directory. Mount the project root to this directory when using the container
 WORKDIR /var/project
-
