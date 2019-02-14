@@ -22,7 +22,9 @@ RUN apk update && \
     vim
 
 # Create directories for the project
-RUN mkdir -p /var/project
+RUN mkdir -p \
+  /var/lib/aws \
+  /var/project
 
 # Upgrade pip
 RUN pip install --upgrade pip
@@ -36,3 +38,5 @@ RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-c
 
 # Set the working directory. Mount the project root to this directory when using the container
 WORKDIR /var/project
+
+COPY src/ /var/lib/aws/

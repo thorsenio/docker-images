@@ -1,6 +1,7 @@
 # IDE & editor files
 .idea
 .vscode
+*.iml
 *.njsproj
 *.ntvs*
 *.sln

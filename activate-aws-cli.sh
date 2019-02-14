@@ -12,4 +12,3 @@ docker container run \
   --mount type=bind,source="${HOME}/.ssh",target=/root/.ssh \
   skypilot/aws:latest \
   bash
-
