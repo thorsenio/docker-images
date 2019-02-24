@@ -18,6 +18,7 @@ RUN apk update && \
     groff \
     jq \
     less \
+    ncurses \
     openssh \
     rsync \
     vim
