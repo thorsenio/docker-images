@@ -12,6 +12,7 @@ FROM python:alpine
 RUN apk update && \
   apk upgrade && \
   apk add \
+    --no-cache \
     bash \
     curl \
     groff \
